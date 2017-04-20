@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 //  添加路由 可以访问 /now 页面，用于显示当前时间
 Route::get('now', function () {
     return date('Y-m-d H:i:s');
 });
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
